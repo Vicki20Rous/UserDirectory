@@ -15,7 +15,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -40,5 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://vicki20rous.github.io/Employee-Directory"
+  "homepage": "https//Vicki20Rous.github.io/UserDirectory"
 }
