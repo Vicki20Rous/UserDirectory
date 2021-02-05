@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/https//Vicki20Rous.github.io/UserDirectory/static/css/main.13e16e31.chunk.css",
+    "main.js": "/https//Vicki20Rous.github.io/UserDirectory/static/js/main.f54c0e41.chunk.js",
+    "main.js.map": "/https//Vicki20Rous.github.io/UserDirectory/static/js/main.f54c0e41.chunk.js.map",
+    "runtime-main.js": "/https//Vicki20Rous.github.io/UserDirectory/static/js/runtime-main.6ecf324d.js",
+    "runtime-main.js.map": "/https//Vicki20Rous.github.io/UserDirectory/static/js/runtime-main.6ecf324d.js.map",
+    "static/js/2.5c498c90.chunk.js": "/https//Vicki20Rous.github.io/UserDirectory/static/js/2.5c498c90.chunk.js",
+    "static/js/2.5c498c90.chunk.js.map": "/https//Vicki20Rous.github.io/UserDirectory/static/js/2.5c498c90.chunk.js.map",
+    "index.html": "/https//Vicki20Rous.github.io/UserDirectory/index.html",
+    "static/css/main.13e16e31.chunk.css.map": "/https//Vicki20Rous.github.io/UserDirectory/static/css/main.13e16e31.chunk.css.map",
+    "static/js/2.5c498c90.chunk.js.LICENSE.txt": "/https//Vicki20Rous.github.io/UserDirectory/static/js/2.5c498c90.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/https//Vicki20Rous.github.io/UserDirectory/static/media/blueangel.665e9d21.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ecf324d.js",
+    "static/js/2.5c498c90.chunk.js",
+    "static/css/main.13e16e31.chunk.css",
+    "static/js/main.f54c0e41.chunk.js"
+  ]
+}
