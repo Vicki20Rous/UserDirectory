@@ -1,10 +1,11 @@
 import React from "react";
-import EmployeeDirectory from "./pages/ProfileDirectory";
-import "./App.css"
+import SearchEmployee from "./pages/SearchEmployee";
 
-const App = () => {
+
+function App() {
   return (
-  <EmployeeDirectory />
+    <SearchEmployee />
+
   )
 };
   

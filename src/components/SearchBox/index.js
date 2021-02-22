@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchBox = (props) => {
+function SearchBox(props) {
   return (
     <form className="search">
       <div className="form-group">
@@ -11,18 +11,13 @@ const SearchBox = (props) => {
           name="search"
           list="names"
           type="text"
-          className="form-control"
+          value = {props.value}
           placeholder="Name"
-          id="name"
+          id="search"
         />
         {/* Sort button in searchbox */}
-        <button
-          type="submit"
-          onClick={props.handleSort}
-          className="btn btn-dark"
-        >
-          Sort A-Z
-        </button>
+        <button className="btn btn-primary" onClick={props.handleFormSubmit}>SearchEmployee</button>
+        <button className="btn btn-primary" onClick={props.handleFormSubmit}>Clear</button>  
       </div>
     </form>
   );

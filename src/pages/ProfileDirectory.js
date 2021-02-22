@@ -8,60 +8,21 @@ import Wrapper from "../components/Wrapper";
 
 class EmployeeDirectory extends Component {
   state = {
-    search: "",
-    ascending: "",
-    location: "",
+    name: "",
+    image: "",
     results: []
   };
 
-  // When the component mounts, load available employees to be displayed
+ 
   componentDidMount() {
     this.loadEmployees();
   }
 
-  handleInputChange = (event) => {
-    event.preventDefault();
-    this.setState({ search: event.target.value.toLowerCase() });
+  handleBtnClick = event => {
+    const btnType = event.target.attributes.getEmployees().value;
+    
   };
 
-  // sort in ascending or descending order
-  handleSort = (event) => {
-    event.preventDefault();
-    const { ascending } = this.state;
-    if (ascending === false || ascending === "") {
-      // A to Z
-      this.handleSortAZ();
-    } else if (ascending === true) {
-      // Z to A
-      this.handleSortZA();
-    } else if (ascending === true) {
-      // location
-      this.handleSortLocation();
-    }
-    return;
-  };
-
-  // sort A to Z
-  handleSortAZ = () => {
-    this.setState({
-      results: this.state.results.sort((a, b) =>
-        a.name.first.localeCompare(b.name.first)
-      ),
-      ascending: true,
-    });
-  };
-
-  // sort Z to A
-  handleSortZA = () => {
-    this.setState({
-      results: this.state.results.sort((a, b) =>
-        b.name.first.localeCompare(a.name.first)
-      ),
-      ascending: false,
-    });
-  };
-
-  // load employee list
   loadEmployees = () => {
     API.getEmployees()
       .then((res) =>
@@ -88,7 +49,7 @@ class EmployeeDirectory extends Component {
             handleInputChange={this.handleInputChange}
           ></SearchBox>
 
-          <SearchHeadings results={filter}></SearchHeadings>
+          <SearchHeadings results={prop.results}></SearchHeadings>
         </div>
       </Wrapper>
     );
