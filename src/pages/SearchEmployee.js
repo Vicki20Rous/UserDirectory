@@ -17,18 +17,19 @@ class SearchEmployee extends Component {
  
   componentDidMount() {
     API.searchResults().then((res) => {
-        console.log();
-        this.setState({ 
-          employees: res.data.results.map((employee, e) =>({
+        console.log(res.data.results);
+        
+        const UserProfile = res.data.results.map((employee) =>({
             firstName: employee.name.first,
             lastName: employees.name.last,
             picture: employee.picture.medium,
             phone: employee.phone,
             email: employee.email,
             city: employee.location.city,
-            key: e,
-          }))
           
+          }));
+          this.setState({ 
+            results: UserProfile,
         });
       })
       .catch(err => console.log(err));
@@ -36,11 +37,11 @@ class SearchEmployee extends Component {
     
     searchEmployees = (filter) =>
     console.log("Search by name:", filter);
-    const filteredResult = this.state.employees.filter((employee) => {
-      let values = Object.values(employee).join("")toLocaleLowerCase();
+    const Result = this.state.employees.filter((employee) => {
+      // let values = Object.values(employee).join("")toLowerCase();
       return values.indexOf(filter.toLowerCase()) !== -1;
     });
-    this.setState({employees: filteredResult }); 
+    this.setState({employees: Result }); 
     };
   
     handleInputChange = event => 
