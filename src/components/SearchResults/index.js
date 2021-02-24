@@ -10,9 +10,10 @@ function SearchResults(props) {
               <img alt= {props.firstName} src= {props.picture.thumbnail} />
             </th>
             <td>{props.firstName}</td>
-            <th>{props.lastName}</td>
+            <td>{props.lastName}</td>
             <td>{props.phone}</td>
             <td>{props.email}</td>
+            <td>{props.picture.thumbnail}<td>
             <td>{props.city}</td>
           </tr>
       </thread>

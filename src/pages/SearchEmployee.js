@@ -35,20 +35,20 @@ class SearchEmployee extends Component {
       .catch(err => console.log(err));
   };
     
-    searchEmployees = (filter) =>
-    console.log("Search by name:", filter);
-    const Result = this.state.employees.filter((employee) => {
-      // let values = Object.values(employee).join("")toLowerCase();
+    searchEmployees = (filter) => {
+    console.log("Search", filter);
+    const filteredlist = this.state.employees.filter((employee) => {
+      var values = Object.values(employee).join("").toLowerCase();
       return values.indexOf(filter.toLowerCase()) !== -1;
     });
-    this.setState({employees: Result }); 
+    this.setState({employees: filteredlist }); 
     };
   
-    handleInputChange = event => 
+    handleInputChange = event => {
     this.setState({
       [event.target.name]: event.target.value,
     });
-    console.log()
+    console.log();
   };
 
   handleFormSubmit = event => {
@@ -59,41 +59,37 @@ class SearchEmployee extends Component {
 
   render() {
   return (
-    <Container>
+    <Wrapper>
+      <Container>
         <div>
         <h1 className="text-center"><Hero /></h1>
-      <div>
+        <div>
         <SearchBox
             value={this.state.state}
             handleInputChange={thishandleInputChange}
             handleFormSubmit={this.handleFormSubmit}
           />
-          </div>
-          <Card
+        </div>
+        <Card>
           
-          >
+        <div>  
           {[...this.state.employees].map((item) => (
               <SearchResults
-              firstName={item.firstName}
-              lastName={item.lastName}
-              phone={item.phone}
-              email={item.email}
-              picture={item.picture.thumbnail}
-              city={item.city}
-              key={item.key}
+              firstName={this.props.firstName}
+              lastName={this.props.lastName}
+              phone={this.props.phone}
+              email={this.props.email}
+              picture={this.props.picture.thumbnail}
+              city={this.props.city}
               />
-            )
-          ) : (
-            <table className="table">
-            No Results to Display</table>
-
-          )}
-        </Card>
-        </Container>
+            )};
         </div>
+      <Container>
+    <Wrapper>
       
-    );
+    
+    }
   }
 }
-  
+
 export default SearchEmployee;
